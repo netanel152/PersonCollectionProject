@@ -1,7 +1,4 @@
-﻿
-Explanation about my answer.
-
-I made an example in the main function.
+I made an example in the main function (Program.cs).
 
 The Class Person implements the IPerson (the interface you gave me) for creating persons.
 
