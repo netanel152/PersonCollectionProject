@@ -1,10 +1,11 @@
-﻿using System;
+﻿using PersonCollectionProject.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PersonCollectionProject
+namespace PersonCollectionProject.Models
 {
     public class Person : IPerson
     {
@@ -17,7 +18,7 @@ namespace PersonCollectionProject
         public Person(string FirstName, string lastName, int id)
         {
             this.FirstName = FirstName;
-            this.LastName = lastName;
+            LastName = lastName;
             this.id = id;
         }
 

@@ -1,10 +1,13 @@
 ﻿using PersonCollectionProject;
+using PersonCollectionProject.BL;
+using PersonCollectionProject.Interfaces;
+using PersonCollectionProject.Models;
 
 IPerson personMoti = new Person("Moti", "Laufer", 1);
 IPerson personFredi = new Person("Fredi", "Naim", 3);
 IPerson personGow = new Person("Gow", "Landsman", 2);
 IPerson personNetanel = new Person("Netanel", "Aknin", 0);
-IPersonComparable NameCompare = new CompareId(); //CompareId();
+IPersonComparable NameCompare = new CompareFirstName(); //CompareFirstName Or CompareId();
 PersonCollection PersonCollection = new PersonCollection(NameCompare);
 PersonCollection.SubscribeToPersonCollection(new SubscriberClass().SubscriberMethod);
 

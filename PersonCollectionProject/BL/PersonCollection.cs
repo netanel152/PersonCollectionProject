@@ -1,17 +1,18 @@
-﻿using System;
+﻿using PersonCollectionProject.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PersonCollectionProject
+namespace PersonCollectionProject.BL
 {
     public class PersonCollection
     {
-        IPersonComparable _personComparable;
+        private readonly IPersonComparable _personComparable;
         private List<IPerson> _personCollection;
         private static readonly object lockObject = new();
-        private event Action<IPerson,string> PersonsCollectionChanged;
+        private event Action<IPerson, string> PersonsCollectionChanged;
 
         public PersonCollection(IPersonComparable personComparable)
         {
@@ -39,7 +40,7 @@ namespace PersonCollectionProject
             }
         }
 
-        private void PublishOnChangeCollection(IPerson person,string removeOrAdd)
+        private void PublishOnChangeCollection(IPerson person, string removeOrAdd)
         {
             if (PersonsCollectionChanged != null)
                 PersonsCollectionChanged(person, removeOrAdd);
@@ -76,7 +77,7 @@ namespace PersonCollectionProject
                 return;
             }
 
-            PublishOnChangeCollection(person,"removed");
+            PublishOnChangeCollection(person, "removed");
         }
 
         public void SubscribeToPersonCollection(Action<IPerson, string> subscriber)
