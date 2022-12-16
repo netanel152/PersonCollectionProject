@@ -15,7 +15,7 @@ In the collection class I made subscribe and unsucbscribe methods for the listen
 
 I did also SubscriberClass to demonstrate the publish functionality.
 
-Thank you and have a good weerk,
+Thank you and have a good week,
 
 Netanel Aknin.
 
