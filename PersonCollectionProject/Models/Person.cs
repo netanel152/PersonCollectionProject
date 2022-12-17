@@ -1,9 +1,4 @@
 ﻿using PersonCollectionProject.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PersonCollectionProject.Models
 {
@@ -12,19 +7,19 @@ namespace PersonCollectionProject.Models
         public DateTime DateOfBirth { get; }
         public string FirstName { get; }
         public int Height { get; }
-        public int id { get; }
+        public int Id { get; }
         public string LastName { get; }
 
         public Person(string FirstName, string lastName, int id)
         {
             this.FirstName = FirstName;
             LastName = lastName;
-            this.id = id;
+            this.Id = id;
         }
 
         public int GetId()
         {
-            return id;
+            return Id;
         }
 
         public string GetFirstName()

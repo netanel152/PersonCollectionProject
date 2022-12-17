@@ -1,5 +1,4 @@
-﻿using PersonCollectionProject;
-using PersonCollectionProject.BL;
+﻿using PersonCollectionProject.BL;
 using PersonCollectionProject.Interfaces;
 using PersonCollectionProject.Models;
 
@@ -8,7 +7,7 @@ IPerson personFredi = new Person("Fredi", "Naim", 3);
 IPerson personGow = new Person("Gow", "Landsman", 2);
 IPerson personNetanel = new Person("Netanel", "Aknin", 0);
 IPersonComparable NameCompare = new CompareFirstName(); //CompareFirstName Or CompareId();
-PersonCollection PersonCollection = new PersonCollection(NameCompare);
+PersonCollection PersonCollection = new(NameCompare);
 PersonCollection.SubscribeToPersonCollection(new SubscriberClass().SubscriberMethod);
 
 PersonCollection.Add(personMoti);
@@ -29,7 +28,7 @@ printCollection(PersonCollection);
 static void printCollection(PersonCollection PersonCollection)
 {
     Console.WriteLine("=====================\nThe current collection:");
-    foreach (IPerson person in PersonCollection.getPersonCollection())
+    foreach (IPerson person in PersonCollection.GetPersonCollection())
     {
         Console.WriteLine(person.GetFirstName());
     }

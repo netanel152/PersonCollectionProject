@@ -1,9 +1,4 @@
 ﻿using PersonCollectionProject.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PersonCollectionProject.BL
 {
@@ -19,7 +14,7 @@ namespace PersonCollectionProject.BL
             _personComparable = personComparable;
             _personCollection = new List<IPerson>();
         }
-        public List<IPerson> getPersonCollection()
+        public List<IPerson> GetPersonCollection()
         {
             return _personCollection;
         }

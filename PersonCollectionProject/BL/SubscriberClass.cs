@@ -9,10 +9,9 @@ namespace PersonCollectionProject.BL
 {
     public class SubscriberClass : ISubscriber
     {
-        public void SubscriberMethod(IPerson obj, string changedMethod)
+        public void SubscriberMethod(IPerson obj, string action)
         {
-
-            Console.WriteLine(obj.GetFirstName() + $" was {changedMethod}!!");
+            Console.WriteLine(obj.GetFirstName() + $" was {action}!!");
         }
     }
 }
