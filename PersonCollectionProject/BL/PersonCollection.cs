@@ -5,7 +5,7 @@ namespace PersonCollectionProject.BL
     public class PersonCollection
     {
         private readonly IPersonComparable _personComparable;
-        private List<IPerson> _personCollection;
+        private readonly List<IPerson> _personCollection;
         private static readonly object lockObject = new();
         private event Action<IPerson, string> PersonsCollectionChanged;
 
