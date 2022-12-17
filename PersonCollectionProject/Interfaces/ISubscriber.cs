@@ -3,6 +3,6 @@ namespace PersonCollectionProject.Interfaces
 {
     public interface ISubscriber
     {
-        void SubscriberMethod(IPerson person, string changedMethod);
+        void SubscriberMethod(IPerson person, string action);
     }
 }

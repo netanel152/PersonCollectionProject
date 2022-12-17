@@ -17,4 +17,3 @@ I did also SubscriberClass to demonstrate the publish functionality.
 Thank you and have a good week,
 
 Netanel Aknin.
-

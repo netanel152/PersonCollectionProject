@@ -10,11 +10,11 @@ namespace PersonCollectionProject.Models
         public int Id { get; }
         public string LastName { get; }
 
-        public Person(string FirstName, string lastName, int id)
+        public Person(string firstName, string lastName, int id)
         {
-            this.FirstName = FirstName;
+            FirstName = firstName;
             LastName = lastName;
-            this.Id = id;
+            Id = id;
         }
 
         public int GetId()

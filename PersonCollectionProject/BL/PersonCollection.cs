@@ -35,10 +35,10 @@ namespace PersonCollectionProject.BL
             }
         }
 
-        private void PublishOnChangeCollection(IPerson person, string removeOrAdd)
+        private void PublishOnChangeCollection(IPerson person, string action)
         {
             if (PersonsCollectionChanged != null)
-                PersonsCollectionChanged(person, removeOrAdd);
+                PersonsCollectionChanged(person, action);
         }
 
         private void SortInsertPersonInCollection(IPerson newPerson)
@@ -55,7 +55,7 @@ namespace PersonCollectionProject.BL
             _personCollection.Add(newPerson);
         }
 
-        public void RemoveMax()
+        public void RemoveMaxValue()
         {
             IPerson? person = null;
             try
